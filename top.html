@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <div v-show="view_state=='start'">   
+            <file-open1 ref="ref_filebox" v-on:child_freaddone_evt2="file_read_done" ></file-open1>
+            <button v-bind:disabled="!isActiveBtnAnalize" v-on:click="on_clickStart">解析スタート</button>
+        </div>
+
+        <my-table ref="ref_tbl1"></my-table>
+
+        <div>
+            <button v-on:click="btn_click_func">table追加</button>
+        </div>
+    </div>
+
+
+    
+   
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    
+    <script src="main_myComponent.js"></script>
+</body>
+</html>
